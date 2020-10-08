@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML de Testes</title>
+		<style type="text/css">
+			/* A propriedade padding é utilizada para denir uma margem interna em alguns elementos */
+			p {
+				padding: 10px 15px;
+				text-decoration: blink;
+			}
+			p, h2{
+				background-color: yellow;
+				color: blue;
+			}
+			h2 {
+				font-family: "Arial", "Helvetica", sans-serif;
+				text-align: right;
+
+				/* É possível congurar também uma série de espaçamentos de texto com o CSS: */
+				line-height: 3px; /* tamanho da altura de cada linha */
+				letter-spacing: 3px; /* tamanho do espaço entre cada letra */
+				word-spacing: 5px; /* tamanho do espaço entre cada palavra */
+				text-indent: 30px; /* tamanho da margem da primeira linha do texto */
+
+				border-bottom: 2px solid #333333;
+
+				color: rgb(255, 0, 0, 0.5);
+				color: rgba(255, 0, 0, 0.5);
+
+			}
+
+			h1 {
+				background-image: url(img/sobre-background.jpg);
+				height: 200px;
+				width:  1000px;
+				text-align: center;
+			}
+
+			body {
+				border-color: red;
+				border-style: solid;
+				border-width: 1px;
+
+			}
+			/* deixando o fundo ridículo */
+			body {
+				background: gold;
+
+				color: #333333;
+				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			}
+			caixa {
+				height: 50px;
+				width:  50px;
+			}
+
+			azul {
+				background-color: blue;
+			}
+
+			vermelha {
+				background-color: red;
+			}
+
+			especial {
+				border: 2px solid green;
+			}
+
+			#super-especial {
+				border-radius: 10px 10px 10px 10px;
+			}
+
+			/* seletor hierarquico, aplicar estilos em elementos filhos de um pai */
+			#rodape img {
+				margin-right: 35px;
+				vertical-align: middle;
+				width: 94px;
+			}
+		</style>
+		<style>
+			h1 {
+				font-family: serif;
+			}
+			h2 {
+				font-family: sans-serif;
+			}
+			p {
+				font-family: monospace;
+			}
+		</style>
+	</head>
+	<body>
+		Agora digamos que você tenha o seguinte arquivo HTML:
+		<p><strong>Veremos</strong> como é fácil colocar <del>estilo no seu</del> documento HTML</p>
+		<br/><br/><br/><br/> <!-- quebra de linha -->
+		<h2>Cadê as <em>caixas</em>?!</h2>
+		<h1>Esse background é doido!<br/>Mas até agora não vi minhas caixas!!!!</h1>
+		<div class="caixa azul"></div>
+		<div class="caixa vermelha"></div>
+		<div class="caixa azul especial"></div>
+		<div id="super-especial" class="caixa vermelha"></div>
+	</body>
+</html>
+
+
+
+
+<!-- OUTRO EXEMPLO -->
+
+<html>
+    <head>
+        <style type="text/css">
+            #conteudo{
+                background-color:#CCC;
+            }
+            .caixa{
+                background-color:#555;
+                color:#FFF;
+                display:block;
+                height:100%;
+                width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="conteudo">
+            <div class="caixa"></div>
+            <div class="caixa"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,261 @@
+<!--
+Entre os elementos em bloco, podemos destacar as tags de heading <h1> a <h6>, os parágrafos <p> e divisões
+<div>
+Entre os elementos em linha, podemos destacar as tags de âncora <a>, as tags de ênfase <small>, <strong> e
+<em> e a tag de marcação de atributos <span>.
+
+ul li {display: inline;}
+
+top, left, bottom e right
+position: static, relative, absolute ou fixed
+
+
+resumo de position:
+Um resumo de position
+• static
+– Sua posição é dada automaticamente pelo uxo da página: por padrão ele é renderizado logo
+após seus irmãos
+– Não aceita um posicionamento manual (le, right, top, bottom)
+– O tamanho do seu elemento pai leva em conta o tamanho do elemento static
+• relative
+– Por padrão o elemento será renderizado da mesma maneira que o static
+– Aceita posicionamento manual
+– O tamanho do seu elemento pai leva em conta o tamanho do elemento relative, porém sem levar
+em conta seu posicionamento. O pai não sofreria alterações mesmo se o elemento fosse static.
+• xed
+– Uma conguração de posicionamento vertical (le ou right) e uma horizontal (top ou bottom) é
+obrigatória
+– O elemento será renderizado na página na posição indicada: mesmo que ocorra uma rolagem o
+elemento permanecerá no mesmo lugar
+– Seu tamanho não conta para calcular o tamanho do elemento pai, é como se não fosse elemento
+lho
+• absolute
+– Uma conguração de posicionamento vertical (le ou right) e uma horizontal (top ou bottom) é
+obrigatória
+– O elemento será renderizado na posição indicada, porém relativa ao primeiro elemento pai cujo
+position seja diferente de static ou, se não existir este pai, relativa à página
+– Seu tamanho não conta para calcular o tamanho do elemento pai
+-->
+
+
+<!-- O servidor pode executar código e gerar HTML na hora pro cliente, dinamicamente. 
+	É esse processamento de lógica dinâmica no servidor que queremos fazer com PHP-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Mirror Fashion</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<!-- css reset, destaques: html5 boilerplate, yui3 css reset, eric meyer css reset (usando esse) -->
+		<link rel="stylesheet" href="css/estilos.css">
+		<link rel="stylesheet" href="css/mobile.css" media="(max-width: 939px)">
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="container">
+		<!-- Conteúdo do cabeçalho -->
+		 	<h1><img src="img/logo.png" alt="Mirror Fashion"></h1>
+			<!-- alt da imagem. Esse atributo indica conteúdo alternativo,
+			que será usado quando o cliente não for visual
+			-> h1 e alt nao altera a img, sao de importancia semântica-->
+			<p class="sacola">
+			Nenhum item na sacola de compras
+			</p>
+			<nav class="menu-opcoes"> <!-- nav = representa blocos de navegação primários -->
+				<ul>
+					<li><a href="#">Sua Conta</a></li>
+					<li><a href="#">Lista de Desejos</a></li>
+					<li><a href="#">Cartão Fidelidade</a></li>
+					<li><a href="sobre.html">Sobre</a></li>
+					<li><a href="#">Ajuda</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="main">
+			<!-- Conteúdo principal -->
+			<div class="container destaque">
+				<section class="busca">
+					<h2>Busca</h2>
+					<form>
+						<input class="search-input" type="search">
+						<input type="image" src="img/busca.png">
+					</form>
+				</section><!-- fim .busca -->
+				<section class="menu-departamentos">
+					<h2>Departamentos</h2>
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Blusas e Camisas</a>
+								<ul>
+								<li><a href="#">Manga curta</a></li>
+								<li><a href="#">Manga comprida</a></li>
+								<li><a href="#">Camisa social</a></li>
+								<li><a href="#">Camisa casual</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Calças</a></li>
+							<li><a href="#">Saias</a></li>
+							<li><a href="#">Vestidos</a></li>
+							<li><a href="#">Sapatos</a></li>
+							<li><a href="#">Bolsas e Carteiras</a></li>
+							<li><a href="#">Acessórios</a></li>
+						</ul>
+					</nav>
+				</section><!-- fim .menu-departamentos -->
+				<img src="img/destaque-home.png" alt="Promoção: Big City Night">
+			</div><!-- fim .container .destaque -->
+		</section>
+		<section id="destaques">
+			<!-- Painéis com destaques -->
+			<div class="container paineis">
+			<!-- os paineis de novidades e mais vendidos entrarão aqui dentro -->
+
+				<section class="painel novidades">
+					<h2>Novidades</h2>
+					<ol>
+					<!-- 1º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura13.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 2º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura8.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 3º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura9.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 4º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura10.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 5º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura11.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 6º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura12.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					</ol>
+				</section>
+
+				<section class="painel mais-vendidos">
+					<h2>Mais Vendidos</h2>
+					<ol>
+					<!-- 1º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura7.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 2º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura2.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 3º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura3.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 4º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura4.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 5º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura5.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					<!-- 6º produto -->
+						<li>
+						<a href="produto.html">
+						<figure>
+						<img src="img/produtos/miniatura6.png">
+						<figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+						</figure>
+						</a>
+						</li>
+					</ol>
+				</section>
+
+			</div>
+		</section>
+
+		<footer>
+			<!-- Conteúdo do rodapé -->
+			<div class="container">
+			<img src="img/logo-rodape.png" alt="Logo Mirror Fashion">
+			<ul class="social">
+				<li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
+				<li><a href="http://twitter.com/mirrorfashion">Twitter</a></li>
+				<li><a href="http://plus.google.com/mirrorfashion">Google+</a></li>
+			</ul>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<!--
+HTML Semântico
+As tags que usamos antes - header, section e footer - são tags novas do HTML5
+Um HTML semântico carrega significado independente da sua apresentação visual
+Semântica é uma importante técnica de SEO - Search Engine Optimization
+-->

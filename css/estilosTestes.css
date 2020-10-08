@@ -1,0 +1,132 @@
+p {
+	color: blue;
+	/* background-color: yellow; */
+	font-family: monospace;
+	text-align: justify; /* center, right, left */
+}
+
+p {
+	#line-height: 3px; /* tamanho da altura de cada linha */
+	letter-spacing: 3px; /* tamanho do espaço entre cada letra */
+	word-spacing: 5px; /* tamanho do espaço entre cada palavra */
+	text-indent: 30px; /* tamanho da margem da primeira linha do texto */
+}
+
+body {
+	background-color: cyan;
+	font-family: "Arial", "Helvetica", sans-serif;
+}
+
+/* Comentários no CSS */
+
+body {
+	border-color: red;
+	border-style: solid;  /* Qualquer padrão diferente do padrão none */
+	border-width: 1px;
+}
+
+h1 {
+	color: red;
+	font-family: serif;
+	background-image: url(../img/sobre-background.jpg);
+}
+
+h2 {
+	font-family: sans-serif;
+	color: yellow;
+	background-color: gold;
+}
+
+h3 {
+	/*color: rgb(255,200,0);*/
+	/* modo hexa é mais comum 8 */
+	color: #FFC800;
+	/* se o número em hexa se repete, ele pode ser simplificado */
+	/*color: #3366FF = #36F;*/
+}
+
+figure {
+	font-style: oblique; /* italic, normal */
+}
+
+
+/* padding: margem interna de alguns elementos */
+
+/* Aplicado a todas as direções */
+p {
+	padding: 10px;
+}
+
+/* Primeiro aplicado acima e abaixo e segundo a direita e esquerda */
+p {
+	padding: 10px 15px;
+}
+
+/* Primeiro acima, segundo a direita e esquerda e terceiro abaixo */
+p {
+	padding: 10px 20px 15px;
+}
+
+/* Aplicados no sentido horario */
+/* cima, direita, baixo, esquerda */
+p {
+	padding: 10px 20px 15px 5px;
+}
+
+
+/* margin: margem externa de alguns elementos */
+
+/* margem zero, e o navegador decide a margem de acordo com espaço disponível */
+p {
+	margin 0 auto;
+}
+
+
+/* definir dimensões de um elemento */
+p {
+	background-color: red;
+	height: 300px;
+	width: 300px;
+}
+
+/* seletor de id: pode estar apenas uma vez em cada arquivo html */
+#cabecalho {
+	color: white;
+	text-align: center;
+}
+
+/* seletor hierarquico para aplicar estilos aos elementos filhos de um elemento pai */
+/* O estilo do id=rodape sera aplicado apenas no elementos img filhos do elemento com id=rodape */
+#rodape img {
+	margin-right: 35px;
+	vertical-align: middle;
+	width: 94px;
+}
+
+.quadrado {
+background: green;
+height: 200px;
+width: 200px;
+}
+.absoluto {
+position: absolute;
+top: 20px;
+right: 30px;
+}
+
+.relativo {
+position: relative;
+}
+
+#rodape {
+	color: #777;
+	margin: 30px 0;
+	padding: 30px 0;
+}
+
+/* uso do seletor de descendentes */
+#rodape img {
+	margin-right: 30px;
+	vertical-align: middle;
+	width: 94px;
+}
